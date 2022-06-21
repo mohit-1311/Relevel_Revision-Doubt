@@ -61,34 +61,3 @@ r.question("Enter first number: ", (num1) => {
     r.close();
   });
 });
-
-
-// Method 3 - Using process
-
-var questions = [
-  "What is your name ?", // 0
-  "What is your hobby ?", // 1
-  "Which programming language do you like ?", // 2
-];
-
-var answers = [];
-
-function ask(i) {
-  process.stdout.write(`\n ${questions[1]}`);
-  // process.stdout.write("  >  ");
-}
-
-process.stdin.on("data", function (data) {
-  answers.push(data.toString().trim());
-
-  if (answers.length < questions.length) {
-    // 1    Mohit       <     3
-    // 2    games      <   3
-    // 3    Javascript
-    // 3 is not less than 3
-    ask(i);
-  } else {
-    process.exit();
-  }
-});
-
