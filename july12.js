@@ -2,7 +2,7 @@ let N = 8;
 
 function isSafe(x, y, result) {
   if (x >= 0 && x < N && y >= 0 && y < N && result[x][y] == -1) return true;
-  else false;
+  else return false;
 }
 
 // Driver function
